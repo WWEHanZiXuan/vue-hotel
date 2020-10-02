@@ -2,12 +2,12 @@
 <div class="box">
   <div class="content">
     <div class="content-top">
-      <div class="administration">酒店管理</div>
-      <div class="information">酒店信息</div>
+      <div class="administration">客房管理</div>
+      <div class="information">客房信息</div>
     </div>
     <div class="advertising-Column">
       <div class="text">搜索条件</div>
-      <img src="../assets/images/help.png" class="help" />
+      <img src="../../assets/images/help.png" class="help" />
     </div>
     <div class="search-Box">
       <div class="search">

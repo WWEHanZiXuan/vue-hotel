@@ -2,12 +2,12 @@
 <div class="box">
   <div class="content">
     <div class="content-top">
-      <div class="administration">酒店管理</div>
-      <div class="information">酒店信息</div>
+      <div class="administration">商品管理</div>
+      <div class="information">客房信息</div>
     </div>
     <div class="advertising-Column">
       <div class="text">搜索条件</div>
-      <img src="../assets/images/help.png" class="help" />
+      <div class="help">导出</div>
     </div>
     <div class="search-Box">
       <div class="search">
@@ -32,21 +32,24 @@
       <el-table :data="tableData" border style="width: 100%">
         <el-table-column type="index" :index="indexMethod" fixed label="序号" width="100">
         </el-table-column>
-        <el-table-column prop="name" label="酒店名称" width="200">
+        <el-table-column prop="name" label="商品名称" width="200">
         </el-table-column>
-        <el-table-column prop="date" label="创建时间" width="300">
+        <el-table-column prop="url" label="缩列图" width="140">
         </el-table-column>
-        <el-table-column prop="number" label="客房数量" width="100">
+        <el-table-column prop="price" label="单价" width="140">
         </el-table-column>
-        <el-table-column prop="employees" label="员工数量" width="100">
+        <el-table-column prop="stock" label="库存" width="140">
         </el-table-column>
-        <el-table-column prop="account" label="管理员账号" width="120">
+        <el-table-column prop="hotel" label="所属酒店" width="160">
         </el-table-column>
-        <el-table-column prop="telephone" label="管理员电话" width="120">
+        <el-table-column prop="state" label="状态" width="160">
         </el-table-column>
-        <el-table-column fixed="right" label="操作" width="100">
+        <el-table-column label="操作" width="160">
           <template slot-scope="scope">
+            <el-button type="text" size="small">修改</el-button>
             <el-button @click="handleClick(scope.row)" type="text" size="small">删除</el-button>
+            <el-button type="text" size="small">上架</el-button>
+            <el-button type="text" size="small">下架</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -64,36 +67,36 @@ export default {
     return {
       value: "",
       tableData: [{
-          name: "汉庭酒店",
-          date: "2016-05-03",
-          number: 20,
-          employees: 20,
-          account: "张三",
-          telephone: 18882285656,
+          name: "王老吉",
+          url: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
+          price: 20,
+          stock: 20,
+          hotel: "汉庭酒店",
+          state: "上架",
         },
         {
-          name: "汉庭酒店",
-          date: "2016-05-03",
-          number: 20,
-          employees: 20,
-          account: "张三",
-          telephone: 18882285656,
+          name: "王老吉",
+          url: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
+          price: 20,
+          stock: 20,
+          hotel: "汉庭酒店",
+          state: "上架",
         },
         {
-          name: "汉庭酒店",
-          date: "2016-05-03",
-          number: 20,
-          employees: 20,
-          account: "张三",
-          telephone: 18882285656,
+          name: "王老吉",
+          url: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
+          price: 20,
+          stock: 20,
+          hotel: "汉庭酒店",
+          state: "上架",
         },
         {
-          name: "汉庭酒店",
-          date: "2016-05-03",
-          number: 20,
-          employees: 20,
-          account: "张三",
-          telephone: 18882285656,
+          name: "王老吉",
+          url: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
+          price: 20,
+          stock: 20,
+          hotel: "汉庭酒店",
+          state: "上架",
         },
       ],
     };
@@ -162,9 +165,10 @@ export default {
 }
 
 .help {
-  width: 20px;
-  height: 20px;
-  margin-right: 60px;
+  font-size: 13px;
+  margin-right: 30px;
+  margin-top: 20px;
+  color: #898989;
 }
 
 .search-Box {

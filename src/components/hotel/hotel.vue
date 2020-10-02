@@ -7,7 +7,7 @@
     </div>
     <div class="advertising-Column">
       <div class="text">搜索条件</div>
-      <img src="../assets/images/help.png" class="help" />
+      <img src="../../assets/images/help.png" class="help" />
     </div>
     <div class="search-Box">
       <div class="search">
